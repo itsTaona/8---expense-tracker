@@ -9,12 +9,12 @@ def view_expenses(conn):
         rows = cur.fetchall()
         print(f"{len(rows)} rows found.\n")
         print(
-            "{:<20}\t{:<10}\t{:<10}\t{:<10}".format("ID", "Title", "Category", "Price")
+            "{:<10}\t{:<20}\t{:<20}\t{:<10}".format("ID", "Title", "Category", "Price")
         )
         print("-" * 50)
         for row in rows:
             print(
-                "{:<20}\t{:<10}\t{:<10}\t{:<10}".format(
+                "{:<10}\t{:<20}\t{:<20}\t{:<10}".format(
                     row[0], row[1], row[2], "{:.2f}".format(row[3])
                 )
             )
@@ -32,12 +32,12 @@ def view_incomes(conn):
         rows = cur.fetchall()
         print(f"{len(rows)} rows found.\n")
         print(
-            "{:<20}\t{:<10}\t{:<10}\t{:<10}".format("ID", "Title", "Category", "Price")
+            "{:<10}\t{:<20}\t{:<20}\t{:<10}".format("ID", "Title", "Category", "Price")
         )
         print("-" * 50)
         for row in rows:
             print(
-                "{:<20}\t{:<10}\t{:<10}\t{:<10}".format(
+                "{:<10}\t{:<20}\t{:<20}\t{:<10}".format(
                     row[0], row[1], row[2], "{:.2f}".format(row[3])
                 )
             )
